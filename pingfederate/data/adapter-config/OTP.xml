@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:AdapterConfiguration authnCtxClassRef="" isInheritAttributeSettings="false" isInheritAttributeMapping="false" maskOgnlValues="false" isInheritExtendedContractAttributes="false" name="OTP" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Device Selection">User Choice</urn:Field>
+        <urn:Field name="Preferred Delivery Method Attribute"/>
+        <urn:Field name="Attribute Source">LDAP-7E7321F1A07451A2538CBE28E3049C562A437409</urn:Field>
+        <urn:Field name="Search String">sAMAccountName=${userid}</urn:Field>
+        <urn:Field name="Base DN">OU=Ping,DC=gcorp,DC=ovh</urn:Field>
+        <urn:Field name="Test User ID">ping-sa</urn:Field>
+        <urn:Field name="Failure Mode">Block User</urn:Field>
+        <urn:Field name="OTP Length">6</urn:Field>
+        <urn:Field name="Max OTP Attempts">3</urn:Field>
+        <urn:Field name="Max OTP Resends">15</urn:Field>
+        <urn:Field name="Show Success Screens">true</urn:Field>
+        <urn:Field name="Show Error Screens">true</urn:Field>
+        <urn:Field name="LDAP Search Scope">Include subtree</urn:Field>
+        <urn:Field name="OTP Generator Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiTmswWnphcWk3NiIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..QKcyTRsMRDjJkRR44HU9uA.6o_JJIFKf4x_6_BTpw8mqmNRrxW7EY-DxmZR2BKEWn6oFrahPR9pEXBoQJ8JRhFq.s4IgqYWPigLM_ZDZn0D4tQ</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="OTP Length">6</urn:Field>
+        <urn:Field name="Max OTP Attempts">3</urn:Field>
+        <urn:Field name="Max OTP Resends">15</urn:Field>
+        <urn:Field name="Show Success Screens">true</urn:Field>
+        <urn:Field name="Show Error Screens">true</urn:Field>
+        <urn:Field name="LDAP Search Scope">Include subtree</urn:Field>
+        <urn:Field name="OTP Generator Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiTmswWnphcWk3NiIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..x58HB69hEmhmLRM5BSaJiQ.ijsFohVfoa7r9lcle9v0MC2FDl6jJUcoDkXPn8ZbWb19GLefEceBIgvGn9e0lEU5.wL8jd6ssdY1ReYGcu-UCHg</urn:Field>
+    </urn:AdvancedFields>
+    <urn:Tables>
+        <urn:Table name="Notification Delivery Methods">
+            <urn:Row defaultRow="false">
+                <urn:Field name="Notification Publisher">BytemarkSMTP</urn:Field>
+                <urn:Field name="Contact Attribute">mail</urn:Field>
+                <urn:Field name="Language Properties and Templates Key">pingfederate.smtp</urn:Field>
+            </urn:Row>
+        </urn:Table>
+    </urn:Tables>
+    <urn:ExtendedContractAttributes/>
+    <urn:UniqueKeyField>username</urn:UniqueKeyField>
+    <urn:AttributeMapping>
+        <urn1:AttributeMap Name="otp_method" Type="Adapter" Value="otp_method" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="otp_target" Type="Adapter" Value="otp_target" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="status" Type="Adapter" Value="status" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="username" Type="Adapter" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:AttributeMapping>
+</urn:AdapterConfiguration>

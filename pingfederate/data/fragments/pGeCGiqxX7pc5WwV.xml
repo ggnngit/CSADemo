@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PolicyFragment id="pGeCGiqxX7pc5WwV" name="MFAFragment" inputContractId="RBhbG8qNX4nFnhJb" outputContractId="RBhbG8qNX4nFnhJb" lastModifiedMillis="1610574197523" xmlns:urn="urn:pingidentity.com:pf:policy:fragment">
+    <urn:policy context="">
+        <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:urn="urn:pingidentity.com:pf:authn-selection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <urn:AuthnSourceKey type="ADAPTER">HTMLFormSimplePCV</urn:AuthnSourceKey>
+            <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
+        </urn:AstAction>
+        <urn1:AstChild context="Fail" xmlns:urn1="urn:pingidentity.com:pf:authn-selection">
+            <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:urn="urn:pingidentity.com:pf:authn-selection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        </urn1:AstChild>
+        <urn1:AstChild context="Success" xmlns:urn1="urn:pingidentity.com:pf:authn-selection">
+            <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:urn="urn:pingidentity.com:pf:authn-selection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <urn:AuthnSourceKey type="ADAPTER">PingID</urn:AuthnSourceKey>
+                <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFormSimplePCV" Value="userPrincipalName"/>
+                <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
+            </urn:AstAction>
+            <urn1:AstChild context="Fail">
+                <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:urn="urn:pingidentity.com:pf:authn-selection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            </urn1:AstChild>
+            <urn1:AstChild context="Success">
+                <urn:AstAction apcId="RBhbG8qNX4nFnhJb" xsi:type="urn:ApcMappingActionType" xmlns:urn="urn:pingidentity.com:pf:authn-selection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <urn:AttributeMapping>
+                        <urn2:AttributeMap Name="mail" Type="Adapter" AttributeSourceId="HTMLFormSimplePCV" Value="mail" xmlns:urn2="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                        <urn2:AttributeMap Name="sAMAccountName" Type="Adapter" AttributeSourceId="HTMLFormSimplePCV" Value="sAMAccountName" xmlns:urn2="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                        <urn2:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="HTMLFormSimplePCV" Value="userPrincipalName" xmlns:urn2="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                        <urn2:AttributeMap Name="givenName" Type="Adapter" AttributeSourceId="HTMLFormSimplePCV" Value="givenName" xmlns:urn2="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                        <urn2:AttributeMap Name="objectGUID" Type="Adapter" AttributeSourceId="HTMLFormSimplePCV" Value="objectGUID" xmlns:urn2="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                        <urn2:AttributeMap Name="memberOf" Type="Adapter" AttributeSourceId="HTMLFormSimplePCV" Value="memberOf" xmlns:urn2="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                        <urn2:AttributeMap Name="sn" Type="Adapter" AttributeSourceId="HTMLFormSimplePCV" Value="sn" xmlns:urn2="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                        <urn2:AttributeMap Name="userPrincipalName" Type="Adapter" AttributeSourceId="HTMLFormSimplePCV" Value="userPrincipalName" xmlns:urn2="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                        <urn2:TokenAuthorizationIssuanceCriteria xmlns:urn2="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                    </urn:AttributeMapping>
+                </urn:AstAction>
+            </urn1:AstChild>
+        </urn1:AstChild>
+    </urn:policy>
+</urn:PolicyFragment>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sts:request-contracts xmlns:sts="http://pingidentity.com/2009/05/sts-requestcontract">
+    <sts:request-contract id="SAMLBearer" name="SAMLBearer">
+        <sts:Attribute AttributeName="memberOf"/>
+    </sts:request-contract>
+</sts:request-contracts>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="CIBA" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="From Address">test@lab.com</urn:Field>
+        <urn:Field name="Email Server">mail.ping</urn:Field>
+        <urn:Field name="SMTP Port">25</urn:Field>
+        <urn:Field name="Encryption Method">NONE</urn:Field>
+        <urn:Field name="SMTPS Port">465</urn:Field>
+        <urn:Field name="Username"/>
+        <urn:Field name="Password">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiTmswWnphcWk3NiIsInZlcnNpb24iOiIxMC4xLjAuMiJ9.._xfZvOjh8LJoWShekzsoEQ.TMgioCJCNCoNGZaZ6JcG9Q.AwKr26y8cImXkq4OvUVJSw</urn:Field>
+        <urn:Field name="Test Address">giaonguyen@pingidentity.com</urn:Field>
+        <urn:Field name="Connection Timeout">30</urn:Field>
+        <urn:Field name="Company Logo">company-logo.png</urn:Field>
+        <urn:Field name="Make Status Change Callback">true</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="Connection Timeout">30</urn:Field>
+        <urn:Field name="Company Logo">company-logo.png</urn:Field>
+        <urn:Field name="Make Status Change Callback">true</urn:Field>
+    </urn:AdvancedFields>
+    <urn:Tables/>
+    <urn:ExtendedContractAttributes/>
+</urn:PluginConfiguration>

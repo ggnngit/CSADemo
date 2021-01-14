@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:Source2TargetPluginMappings xmlns:urn="urn:pingidentity.com:pf:src2tgt">
+    <urn:Source2TargetPluginMapping sourcePluginId="RBhbG8qNX4nFnhJb" targetPluginId="OTK" countForLicense="true" defaultTargetResource="https://httpbin.org/anything">
+        <urn:AttributeMapping>
+            <urn1:AttributeMap Name="subject" Type="Authentication Policy Contract" Value="subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="memberOf" Type="LDAP" AttributeSourceId="LDAP" Value="memberOf" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeSource Id="LDAP" Description="LDAP" Type="LDAP" DataSourceId="LDAP-7E7321F1A07451A2538CBE28E3049C562A437409" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+                <urn1:Parameter Name="filter" Value="${sAMAccountName}=username"/>
+                <urn1:Parameter Name="search_base" Value="OU=Ping,DC=gcorp,dc=ovh"/>
+                <urn1:Parameter Name="search_scope" Value="SUBTREE_SCOPE"/>
+                <urn1:Parameter Name="memberof_nested_group" Value="false"/>
+            </urn1:AttributeSource>
+            <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        </urn:AttributeMapping>
+    </urn:Source2TargetPluginMapping>
+</urn:Source2TargetPluginMappings>

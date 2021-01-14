@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ker:KerberosRealmsSettings xmlns:ker="http://pingidentity.com/2012/01/kerberos-realms">
+    <ker:KerberosRealms>
+        <ker:KerberosRealm id="KERB-C4230E700920F56A9483EC7484C5ED529EA9EF52">
+            <ker:kerberosRealmName>gcorp.ovh</ker:kerberosRealmName>
+            <ker:keyDistributionCenters>
+                <ker:keyDistributionCenter>lab-dc</ker:keyDistributionCenter>
+            </ker:keyDistributionCenters>
+            <ker:kerberosUsername>ping-sa</ker:kerberosUsername>
+            <ker:kerberosPassword>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiTmswWnphcWk3NiIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..MYXkr9NejDJoFbG1qrxI7g.-XErea3gCXuFD8lFxZkvmg.P0Z37Ez9hlEnPZIHLELhGA</ker:kerberosPassword>
+            <ker:suppressDomainNameConcatenation>false</ker:suppressDomainNameConcatenation>
+        </ker:KerberosRealm>
+    </ker:KerberosRealms>
+    <ker:KdcTimeout>3000</ker:KdcTimeout>
+    <ker:KdcRetries>3</ker:KdcRetries>
+    <ker:ForceTcp>false</ker:ForceTcp>
+    <ker:Debug>true</ker:Debug>
+</ker:KerberosRealmsSettings>

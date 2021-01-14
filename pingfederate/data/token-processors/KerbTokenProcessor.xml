@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:TokenProcessorConfiguration isInheritAttributeSettings="false" maskOgnlValues="false" isInheritExtendedContractAttributes="false" name="KerbTokenProcessor" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Domain/Realm Name">KERB-C4230E700920F56A9483EC7484C5ED529EA9EF52</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields/>
+    <urn:Tables/>
+    <urn:MaskedField>username</urn:MaskedField>
+</urn:TokenProcessorConfiguration>

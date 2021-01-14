@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c2c:c2cContract id="SIBSFSourK7TnUbw" name="P14CPolicyContract" xmlns:c2c="http://pingidentity.com/2014/10/c2cContracts">
+    <c2c:extendedAttributes>
+        <c2c:attr name="given_name"/>
+        <c2c:attr name="family_name"/>
+        <c2c:attr name="email"/>
+    </c2c:extendedAttributes>
+</c2c:c2cContract>

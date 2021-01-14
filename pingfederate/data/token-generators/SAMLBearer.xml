@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="SAMLBearer" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Minutes Before">5</urn:Field>
+        <urn:Field name="Minutes After">5</urn:Field>
+        <urn:Field name="Issuer">urn:saml2:giaocorp</urn:Field>
+        <urn:Field name="Signing Certificate">wiexmaqffapmmu2u4o334tafk</urn:Field>
+        <urn:Field name="Signing Algorithm">RSA_SHA256</urn:Field>
+        <urn:Field name="Include Certificate in KeyInfo">false</urn:Field>
+        <urn:Field name="Include Raw Key in KeyValue">false</urn:Field>
+        <urn:Field name="Audience">urn:saml2:giaocorp</urn:Field>
+        <urn:Field name="Confirmation Method">urn:oasis:names:tc:SAML:2.0:cm:bearer</urn:Field>
+        <urn:Field name="Encryption Certificate"/>
+        <urn:Field name="Message Customization Expression"/>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="Message Customization Expression"/>
+    </urn:AdvancedFields>
+    <urn:Tables/>
+    <urn:ExtendedContractAttributes>
+        <urn:AttributeName>memberOf</urn:AttributeName>
+    </urn:ExtendedContractAttributes>
+</urn:PluginConfiguration>

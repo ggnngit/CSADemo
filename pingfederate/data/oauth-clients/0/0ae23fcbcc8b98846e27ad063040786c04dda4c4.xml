@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:Clients xmlns:urn="urn:pingidentity.com:pf:oauth:client">
+    <urn:Client client_id="ciba_client" name="CIBA Client" persistentGrantExpirationTime="0" enabled="true" lastModified="2020-06-09T16:02:22.937Z" bypassApprovalPage="false" restrictScopes="false" jwks="{    &quot;keys&quot;:[       {          &quot;kty&quot;:&quot;RSA&quot;,          &quot;kid&quot;:&quot;k1&quot;,          &quot;use&quot;:&quot;sig&quot;,          &quot;n&quot;:&quot;kPAd76CKY_1_COaCkehcA595RffQMjNI7UXlNFzcilxRrfTwFQ5IFznU7HJTeICFf3771KUJ01j7upxLj1OeYiNXeQkGHPSNhAk8NBGNzAkknuP8RkZbF6NVp5s-HYLuU_NexmuPPsWyy9pf1Y3wtiRpmk5WxZ-QzE_WUCciRHAZPsVcxQAWfwk6BjQP-GwhwfwC9w8KbA0kxDp-LsNwWokcgxoPn9NSC2ScsW7pfXSpS-Di14ePH46SuAeySG7_9GrW-5DSWL6WodvMDopYJl7C6InyH02sRNtm5xRlAKQoZ1Uz_eWy_nvEQLd6CxZqpZHehdYQy-o0n1NqmhmTvQ&quot;,          &quot;e&quot;:&quot;AQAB&quot;       },       {          &quot;kty&quot;:&quot;RSA&quot;,          &quot;kid&quot;:&quot;k2&quot;,          &quot;use&quot;:&quot;enc&quot;,          &quot;n&quot;:&quot;mqCTjtisEjZmxik_Q5R9qENGL7if1K1rqm-u2d0SIoSIzhYaayPtnFK9eKK_x40nd5rwqD24s0ouThklCUEk2C5iHWI6uZGbdSH2NLNKOHFVK8ZqwQchkff_qMaGRB046zcZQ5bg_W_1P9K7Q47T3C2vm8SZqxUrS4JTOt7yK8ZIu38crTbd8iuFdX6b4gqUmfUsVYJycZL5cknT_xJKOJSFp8At4l8EnFfjsNAD3usPZxa5s2fstx9nUCF3iIvN5Dmc7Ojbd8XEnznwa9a-yY0UY7SlYRlNRQTwEAhbNgb0Xf_xymgjc5H7Vz1ISeF6LOsEm7jJ565ViC5y8scmgQ&quot;,          &quot;e&quot;:&quot;AQAB&quot;       },       {          &quot;kty&quot;:&quot;EC&quot;,          &quot;kid&quot;:&quot;k3&quot;,          &quot;use&quot;:&quot;enc&quot;,          &quot;x&quot;:&quot;ym-zsegvabPQjrxAB66dNMAmdS8WHEq6HF-UTCz4eL0&quot;,          &quot;y&quot;:&quot;GK6ildtUStdTQ_cieJuihjh4agYRAjvEnL5IOYJQtT8&quot;,          &quot;crv&quot;:&quot;P-256&quot;       }    ] }" clientAuthnType="NONE" enforceOneTimeJWT="false" isRequireSignedRequest="false">
+        <urn:Grant type="urn:openid:params:grant-type:ciba"/>
+        <urn:SupplementalInfo key="CIBA_POLICY_ID" value="OAuthPlayground"/>
+        <urn:SupplementalInfo key="CIBA_POLLING_INTERVAL" value="3"/>
+        <urn:SupplementalInfo key="DEVICE_FLOW_SETTING" value="SERVER_DEFAULT"/>
+        <urn:SupplementalInfo key="PAIRWISE_USER_TYPE" value="false"/>
+        <urn:SupplementalInfo key="DEFAULT_ATM_ID" value="jwt"/>
+        <urn:SupplementalInfo key="RESTRICT_RESPONSE_TYPES" value="false"/>
+        <urn:SupplementalInfo key="id_token_signed_response_alg" value="RS256"/>
+        <urn:SupplementalInfo key="CIBA_USER_CODE_SUPPORTED" value="false"/>
+        <urn:SupplementalInfo key="CIBA_REQUIRE_SIGNED_REQUESTS" value="false"/>
+        <urn:SupplementalInfo key="PING_ACCESS_LOGOUT_CAPABLE" value="false"/>
+        <urn:SupplementalInfo key="ALLOW_AUTHENTICATION_API_INIT" value="false"/>
+        <urn:SupplementalInfo key="REQUIRE_PROOF_KEY_FOR_CODE_EXCHANGE" value="false"/>
+        <urn:SupplementalInfo key="ACCESS_SESSION_REVOCATION_API" value="false"/>
+        <urn:SupplementalInfo key="PERSISTENT_GRANT_IDLE_TIMEOUT_TYPE" value="SERVER_DEFAULT"/>
+        <urn:SupplementalInfo key="VALIDATE_USING_ALL_ELIGIBLE_ATMS" value="false"/>
+        <urn:SupplementalInfo key="CIBA_MODE" value="poll"/>
+        <urn:SupplementalInfo key="ENABLED" value="true"/>
+        <urn:SupplementalInfo key="vnd.ping.policy_group_id" value="OAuthPlayground"/>
+    </urn:Client>
+</urn:Clients>

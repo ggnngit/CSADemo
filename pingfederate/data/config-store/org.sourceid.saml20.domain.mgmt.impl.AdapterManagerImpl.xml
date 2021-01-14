@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:config xmlns:con="http://www.sourceid.org/2004/05/config">
+    <con:map name="IdpAuthnAdapterInstances">
+        <con:item name="HTMLFormSimplePCV">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
+        <con:item name="IdFirst">com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter</con:item>
+        <con:item name="PingID">com.pingidentity.adapters.pingid.PingIDAdapter</con:item>
+        <con:item name="OpenToken">com.pingidentity.adapters.opentoken.IdpAuthnAdapter</con:item>
+        <con:item name="OTP">com.pingidentity.adapters.otpadapter.OTPIdpAdapter</con:item>
+        <con:item name="KerbAdapter">com.pingidentity.adapters.kerberos.idp.KerberosAuthenticationAdapter</con:item>
+        <con:item name="HTMLUsername">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
+        <con:item name="PingIDforWinLogin">com.pingidentity.adapters.pingid.PingIDAdapter</con:item>
+        <con:item name="KerbAdapterADLookUp">com.pingidentity.adapters.kerberos.idp.KerberosAuthenticationAdapter</con:item>
+        <con:item name="winloginACI">com.pingidentity.adapters.pingid.PingIDAdapter</con:item>
+        <con:item name="LIPPD">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
+        <con:item name="P14CAuthN">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
+        <con:item name="PingOneMFA">com.pingidentity.adapters.pingone.mfa.PingOneMfaIdpAdapter</con:item>
+        <con:item name="P14CHTML">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
+        <con:item name="DeviceAuthZRefID">com.pingidentity.pf.adapters.referenceid.IdpBackchannelReferenceAuthnAdapter</con:item>
+        <con:item name="HTML4RADIUS">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
+    </con:map>
+    <con:map name="IdpAdapterInstanceParents"/>
+    <con:map name="SpAuthnAdapterInstances">
+        <con:item name="OTK">com.pingidentity.adapters.opentoken.SpAuthnAdapter</con:item>
+    </con:map>
+</con:config>

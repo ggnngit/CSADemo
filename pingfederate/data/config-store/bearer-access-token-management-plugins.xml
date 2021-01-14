@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:config xmlns:con="http://www.sourceid.org/2004/05/config">
+    <con:map name="bearer-access-token-management-plugin-sequence">
+        <con:item name="ref">12083</con:item>
+        <con:item name="jwt">1187327</con:item>
+        <con:item name="PAAccessToken">1548665</con:item>
+        <con:item name="PingIDforWinLoginAT">96219</con:item>
+        <con:item name="WinLoginACI">1168266</con:item>
+        <con:item name="P14CAT">541720</con:item>
+        <con:item name="httpbinoidc">371100</con:item>
+    </con:map>
+    <con:map name="bearer-access-token-management-plugins">
+        <con:item name="ref">org.sourceid.oauth20.token.plugin.impl.ReferenceBearerAccessTokenManagementPlugin</con:item>
+        <con:item name="jwt">com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin</con:item>
+        <con:item name="PAAccessToken">org.sourceid.oauth20.token.plugin.impl.ReferenceBearerAccessTokenManagementPlugin</con:item>
+        <con:item name="PingIDforWinLoginAT">com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin</con:item>
+        <con:item name="WinLoginACI">com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin</con:item>
+        <con:item name="P14CAT">com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin</con:item>
+        <con:item name="httpbinoidc">com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin</con:item>
+    </con:map>
+    <con:item name="bearer-access-token-management-plugins-default">jwt</con:item>
+</con:config>

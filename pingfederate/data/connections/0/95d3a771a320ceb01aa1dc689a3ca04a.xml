@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor entityID="FedHubIdPCx" urn:name="FedHubIdPCx" ID="lKDh52Ubyh3jXYvacdVyp4QqZA." urn:LogLevel="STANDARD" urn:isActive="true" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
+    <md:Extensions>
+        <urn:EntityExtension PFVersion="10.1.0.8" LicenseGroup="">
+            <urn:DigitialSignatureAliases SigningKeyAlias="y8afxig4wva820tdq3uzgej3a" includeX509inXmlSig="false" includeRawKeyInXmlSig="false" SigningAlgorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256">
+                <urn:ActiveVerificationCertAlias>e3h6p1o88vhk4c0ozc17alk60</urn:ActiveVerificationCertAlias>
+            </urn:DigitialSignatureAliases>
+            <urn:Encryption>
+                <urn:EncryptionPolicy EncryptionAlgorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc" KeyTransportAlgorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p" EncryptAssertion="false" EncryptSubjectNameID="false" SLOEncryptSubjectNameID="false"/>
+                <urn:DecryptionPolicy AssertionEncrypted="false" SubjectNameIDEncrypted="false" AttributeEncrypted="false" SLOSubjectNameIDEncrypted="false"/>
+            </urn:Encryption>
+            <urn:ConnectionTemplateProperties/>
+            <urn:MetadataUrlId xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <urn:enableAutoMetadataUpdate>false</urn:enableAutoMetadataUpdate>
+            <urn:AdditionalAllowedEntitiesConfiguration>
+                <urn:AllowAdditionalEntities>false</urn:AllowAdditionalEntities>
+                <urn:AllowAllEntities>false</urn:AllowAllEntities>
+                <urn:AdditionalAllowedEntities/>
+            </urn:AdditionalAllowedEntitiesConfiguration>
+        </urn:EntityExtension>
+    </md:Extensions>
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" WantAuthnRequestsSigned="false">
+        <md:Extensions>
+            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2020-07-07T20:14:31.156Z">
+                <urn:IncomingBindings Artifact="false" POST="true" Redirect="true" SOAP="false"/>
+                <urn:EnabledProfiles IDPInitiatedSSO="true" IDPInitiatedSLO="true" SPInitiatedSSO="true" SPInitiatedSLO="true"/>
+                <urn:IDP AssertionsSigned="false" DefaultTargetResource="">
+                    <urn:ConnectionContractMapping C2cContractId="RBhbG8qNX4nFnhJb" C2cContractName="Attributes" RestrictVirtualServerIds="false">
+                        <urn:AttributeMap Name="mail" Type="No Mapping" Value="NO_MAPPING"/>
+                        <urn:AttributeMap Name="sAMAccountName" Type="No Mapping" Value="NO_MAPPING"/>
+                        <urn:AttributeMap Name="subject" Type="Assertion" Value="SAML_SUBJECT"/>
+                        <urn:AttributeMap Name="givenName" Type="No Mapping" Value="NO_MAPPING"/>
+                        <urn:AttributeMap Name="objectGUID" Type="No Mapping" Value="NO_MAPPING"/>
+                        <urn:AttributeMap Name="memberOf" Type="No Mapping" Value="NO_MAPPING"/>
+                        <urn:AttributeMap Name="sn" Type="No Mapping" Value="NO_MAPPING"/>
+                        <urn:AttributeMap Name="userPrincipalName" Type="No Mapping" Value="NO_MAPPING"/>
+                        <urn:TokenAuthorizationIssuanceCriteria/>
+                    </urn:ConnectionContractMapping>
+                    <urn:AccountLinkingAndMapping Type="mapping" IncludeAdditionalAttributes="false"/>
+                    <urn:ErrPageMsg>errorDetail.spSsoFailure</urn:ErrPageMsg>
+                </urn:IDP>
+            </urn:RoleExtension>
+        </md:Extensions>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://google.com"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://pingfederate.lab:9031/idp/startSSO.ping?PartnerSpId=Partner%3ASP"/>
+    </md:IDPSSODescriptor>
+    <md:RoleDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" xsi:type="urn:PFAvailableCertsRoleDescriptorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <urn:availableCert>
+            <urn:Base64EncodedCert>MIIDPzCCAiegAwIBAgIGAXK6GPsHMA0GCSqGSIb3DQEBCwUAMDsxCzAJBgNVBAYTAlVTMREwDwYDVQQKEwhHaWFvQ29ycDEZMBcGA1UEAxMQcGluZ2ZlZGVyYXRlLmxhYjAeFw0yMDA2MTUyMjI4MThaFw0yMzA2MTUyMjI4MThaMDsxCzAJBgNVBAYTAlVTMREwDwYDVQQKEwhHaWFvQ29ycDEZMBcGA1UEAxMQcGluZ2ZlZGVyYXRlLmxhYjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKm8NwkNTzYWCguA+dH7QiPxjQoym3tJ1MOMCoSgPFpefXceJ3E6XpqpL5hPEv5pKmYaq+MjW3X+uPW7A51IbxP5rfOCyxVlWKtrebhoOCwPuov3m6izXUFmLFy+LKBSCHB8fTk94JjDkjq1goSf65XWtxqIzk2cYSSfeteBlF6FHz+TLIJ0YJm+NT0Nc6x3G4lWWO+KyRquUitIiYGJuGsFIDh9A97Eu8u1nQSJF3Qt9hsaH+60XECNi5igGCo1AqVfTr1s3fuCKgcmZAXtHl5glBLPlNXVbM6Y+au3C+4ta1I6HN2acitIPWpXwx0yDApDDfeAaDkBbzVKAAC1p6sCAwEAAaNJMEcwRQYDVR0RBD4wPIIQcGluZ2ZlZGVyYXRlLmxhYoIUcGluZ2ZlZGVyYXRlLXJ1bnRpbWWCEnBpbmdmZWRlcmF0ZS1hZG1pbjANBgkqhkiG9w0BAQsFAAOCAQEANmFVQnTrzW7tExJ/KYfFspPAR1Al1z0W/Fia8auvLtpd4YfIc8nvFemz9h8FOgk101UXSLgi3cthXiyLZdMPxBcXLRor42Nt9NSLUuDWSCEklwDxE/ShklUWPV1tCYABerL2N70dAdDwgXAxmq254gQR2+OzEDnAbGtjXjrgF+6Y4N/a6r7DGUyHNvWE14BNLBiO7nIS2i4xzpEyQOX1yfnEqR5WeES49CCwACrphkSfU5vaIyRflTS3zm3m+iS1o60DbaI9wv27YnzNM8JoxDlQ3/ZDmR8wGMIQc9Hjxhym/SijfkIGAKs3EHr/LjfuZxLt2W/GotWSInSl+DhvvQ==</urn:Base64EncodedCert>
+            <urn:alias>e3h6p1o88vhk4c0ozc17alk60</urn:alias>
+        </urn:availableCert>
+    </md:RoleDescriptor>
+    <md:ContactPerson contactType="administrative"/>
+</md:EntityDescriptor>

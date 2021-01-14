@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:AdapterConfiguration authnCtxClassRef="" isInheritAttributeSettings="false" isInheritAttributeMapping="false" maskOgnlValues="false" isInheritExtendedContractAttributes="false" name="PingOneMFA" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Environment ID">3c0fc6d8-3815-4e7b-a670-06336b055369</urn:Field>
+        <urn:Field name="Application Client ID">d303ee14-2d99-46d0-8cdc-4ed464d3b591</urn:Field>
+        <urn:Field name="Application Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiTmswWnphcWk3NiIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..rqhdJcrwh4x2o1R0VBV36w.oh9lxA2QnvHXASagCwgNT2YkV5VZzUVre2umVtW9Eng7gCMnzU6Aj0nXB2ajqEcawrUM9NFom-yWteIXsFLfb43_SRYZ0PBS7d4uMDYfyWs.ozt8TT-KVFpHz5nAq3awqQ</urn:Field>
+        <urn:Field name="PingFederate Connection Client ID">b21d833c-ac6a-4acd-bde6-9ecdf71ee6df</urn:Field>
+        <urn:Field name="PingFederate Connection Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiTmswWnphcWk3NiIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..okr6c6uYSDz9cWWdqyC_OQ.pJ9wVKdeDW4H-s-J_j68lw4TPl4c_1pxKcVBHMZ2sEBnf54tH2d__orPMdGHZcA_VadhWnoGlwtxGNrkEQdP2pA7G6xHh9ebKH5uSIFvy5Y.pKsscqPeEXaupCwbvY7j5w</urn:Field>
+        <urn:Field name="PingOne Authentication Policy">MFA-Only</urn:Field>
+        <urn:Field name="Test Username">pingguy</urn:Field>
+        <urn:Field name="HTML Template Prefix">pingone-mfa</urn:Field>
+        <urn:Field name="Messages Files">pingone-mfa-messages</urn:Field>
+        <urn:Field name="User Not Found Failure Mode">Block user</urn:Field>
+        <urn:Field name="Service Unavailable Failure Mode">Bypass authentication</urn:Field>
+        <urn:Field name="Change Device">Allow</urn:Field>
+        <urn:Field name="Show Success Screens">true</urn:Field>
+        <urn:Field name="Show Error Screens">true</urn:Field>
+        <urn:Field name="Show Timeout Screens">true</urn:Field>
+        <urn:Field name="PingOne Authentication API">https://auth.pingone.com</urn:Field>
+        <urn:Field name="PingOne Management API">https://api.pingone.com</urn:Field>
+        <urn:Field name="API Request Timeout">2000</urn:Field>
+        <urn:Field name="Proxy Settings">System Defaults</urn:Field>
+        <urn:Field name="Custom Proxy Host"/>
+        <urn:Field name="Custom Proxy Port"/>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="Test Username">pingguy</urn:Field>
+        <urn:Field name="HTML Template Prefix">pingone-mfa</urn:Field>
+        <urn:Field name="Messages Files">pingone-mfa-messages</urn:Field>
+        <urn:Field name="User Not Found Failure Mode">Block user</urn:Field>
+        <urn:Field name="Service Unavailable Failure Mode">Bypass authentication</urn:Field>
+        <urn:Field name="Change Device">Allow</urn:Field>
+        <urn:Field name="Show Success Screens">true</urn:Field>
+        <urn:Field name="Show Error Screens">true</urn:Field>
+        <urn:Field name="Show Timeout Screens">true</urn:Field>
+        <urn:Field name="PingOne Authentication API">https://auth.pingone.com</urn:Field>
+        <urn:Field name="PingOne Management API">https://api.pingone.com</urn:Field>
+        <urn:Field name="API Request Timeout">2000</urn:Field>
+        <urn:Field name="Proxy Settings">System Defaults</urn:Field>
+        <urn:Field name="Custom Proxy Host"/>
+        <urn:Field name="Custom Proxy Port"/>
+    </urn:AdvancedFields>
+    <urn:Tables/>
+    <urn:ExtendedContractAttributes/>
+    <urn:UniqueKeyField>username</urn:UniqueKeyField>
+    <urn:AttributeMapping>
+        <urn1:AttributeMap Name="access_token" Type="Adapter" Value="access_token" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="pingone.mfa.status" Type="Adapter" Value="pingone.mfa.status" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="id_token" Type="Adapter" Value="id_token" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="pingone.mfa.status.reason" Type="Adapter" Value="pingone.mfa.status.reason" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="username" Type="Adapter" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:AttributeMapping>
+</urn:AdapterConfiguration>

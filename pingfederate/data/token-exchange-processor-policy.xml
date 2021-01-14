@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:TokenExchangeProcessorPolicies defaultTokenExchangeProcessorPolicyId="AccessTokenProcessorPolicy" xmlns:urn="urn:pingidentity.com:pf:oauth:token:exchange">
+    <urn:TokenExchangeProcessorPolicy id="AccessTokenProcessorPolicy" name="AccessTokenProcessorPolicy" actorTokenRequired="false">
+        <urn:ExtendedAttributeContract>
+            <urn1:ExtendedAttribute AttributeName="memberOf" MaskValue="false" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:ExtendedAttribute AttributeName="userPrincipalName" MaskValue="false" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        </urn:ExtendedAttributeContract>
+        <urn:TokenExchangeProcessorMapping subjectTokenType="urn:ietf:params:oauth:token-type:saml1" subjectTokenProcessorId="SAML11Processor" actorTokenType="" actorTokenProcessorId="">
+            <urn:AttributeMappingType>
+                <urn1:AttributeMap Name="subject" Type="Subject Token" Value="subjecttoken.SAML_SUBJECT" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                <urn1:AttributeMap Name="memberOf" Type="LDAP" AttributeSourceId="OAuthLookUp" Value="memberOf" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                <urn1:AttributeMap Name="userPrincipalName" Type="LDAP" AttributeSourceId="OAuthLookUp" Value="userPrincipalName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                <urn1:AttributeSource Id="OAuthLookUp" Description="OAuthLookUp" Type="LDAP" DataSourceId="LDAP-7E7321F1A07451A2538CBE28E3049C562A437409" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+                    <urn1:Parameter Name="filter" Value="userPrincipalName=${subjecttoken.SAML_SUBJECT}"/>
+                    <urn1:Parameter Name="search_base" Value="OU=Ping,DC=gcorp,DC=ovh"/>
+                    <urn1:Parameter Name="search_scope" Value="SUBTREE_SCOPE"/>
+                    <urn1:Parameter Name="memberof_nested_group" Value="false"/>
+                </urn1:AttributeSource>
+                <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            </urn:AttributeMappingType>
+        </urn:TokenExchangeProcessorMapping>
+        <urn:TokenExchangeProcessorMapping subjectTokenType="urn:ietf:params:oauth:token-type:access_token" subjectTokenProcessorId="JwtAccessTokenProcessor" actorTokenType="" actorTokenProcessorId="">
+            <urn:AttributeMappingType>
+                <urn1:AttributeMap Name="subject" Type="Subject Token" Value="subjecttoken.Username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                <urn1:AttributeMap Name="memberOf" Type="Subject Token" Value="subjecttoken.memberOf" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                <urn1:AttributeMap Name="userPrincipalName" Type="Subject Token" Value="subjecttoken.userPrincipalName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            </urn:AttributeMappingType>
+        </urn:TokenExchangeProcessorMapping>
+    </urn:TokenExchangeProcessorPolicy>
+</urn:TokenExchangeProcessorPolicies>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:config xmlns:con="http://www.sourceid.org/2004/05/config">
+    <con:item name="Associated">true</con:item>
+    <con:item name="ApplicationDockEndpoint">https://desktop.pingone.com/lab.com.giaocorp</con:item>
+    <con:item name="ProvisioningBaseUrl">https://scim.connect.pingidentity.com/prov-service</con:item>
+    <con:item name="KeyPairAlias">kcsfd5j5a5wuwuyriu6b3o3k8</con:item>
+    <con:item name="ClientId">40689e10-525b-4692-aad4-929941a43c0e</con:item>
+    <con:item name="AccountId">caf60015-dd8a-4c4c-94ea-a9037b92b7d1</con:item>
+    <con:item name="CompanyName">giaonguyen+P1@pingidentity.com</con:item>
+</con:config>

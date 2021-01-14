@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="InternalNetwork" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Result Attribute Name">Internal</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields/>
+    <urn:Tables>
+        <urn:Table name="Networks">
+            <urn:Row defaultRow="false">
+                <urn:Field name="Network Range (CIDR notation)">10.10.10.1/24</urn:Field>
+            </urn:Row>
+            <urn:Row defaultRow="false">
+                <urn:Field name="Network Range (CIDR notation)">172.22.0.0/24</urn:Field>
+            </urn:Row>
+        </urn:Table>
+    </urn:Tables>
+</urn:PluginConfiguration>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:config xmlns:con="http://www.sourceid.org/2004/05/config">
+    <con:map name="http://pingone.com/caf60015-dd8a-4c4c-94ea-a9037b92b7d1"/>
+    <con:map name="urn:saml2:giaocorp"/>
+    <con:map name="Partner:SP"/>
+    <con:map name="httpbin"/>
+    <con:map name="httpbinIDFirst"/>
+    <con:map name="PingID Connector"/>
+    <con:map name="FedHubIdPCx"/>
+    <con:map name="urn:saml2:partner"/>
+    <con:map name="urn:federation:MicrosoftOnline"/>
+    <con:map name="Denied"/>
+    <con:map name="httpbin-cert"/>
+    <con:map name="httpbinKerb"/>
+    <con:map name="PingConnect"/>
+    <con:map name="PingConnect2"/>
+    <con:map name="test"/>
+    <con:map name="RingCentralSCIM"/>
+    <con:map name="httpbin-p14c"/>
+    <con:map name="DeviceAuthZ"/>
+    <con:map name="httpbin-saml11"/>
+    <con:map name="https://auth.pingone.com/3c0fc6d8-3815-4e7b-a670-06336b055369/as"/>
+</con:config>

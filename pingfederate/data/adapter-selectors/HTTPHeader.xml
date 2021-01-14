@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="HTTPHeader" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Header Name">Referer</urn:Field>
+        <urn:Field name="Case-Sensitive Matching">false</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields/>
+    <urn:Tables>
+        <urn:Table name="Results">
+            <urn:Row defaultRow="false">
+                <urn:Field name="Match Expression">https://sso.connect.pingidentity.com/sso/sp/initsso?saasid=2090700f-a0a1-4447-921b-e22dc2efbf9c&amp;idpid=ddc98005-9f59-4f20-aab4-3587102b941c</urn:Field>
+            </urn:Row>
+        </urn:Table>
+    </urn:Tables>
+</urn:PluginConfiguration>

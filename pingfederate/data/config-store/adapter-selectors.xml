@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:config xmlns:con="http://www.sourceid.org/2004/05/config">
+    <con:map name="adapter-selectors">
+        <con:item name="HTTPHeader">com.pingidentity.pf.selectors.http.HTTPHeaderAdapterSelector</con:item>
+        <con:item name="SessionAuthentication">com.pingidentity.pf.selectors.session.SessionAuthnSelector</con:item>
+        <con:item name="ConnectionSet">com.pingidentity.pf.selectors.connectionset.ConnectionSetAdapterSelector</con:item>
+        <con:item name="InternalNetwork">com.pingidentity.pf.selectors.cidr.CIDRAdapterSelector</con:item>
+        <con:item name="HTTPParam">com.pingidentity.pf.selectors.http.HttpRequestParamAuthnSelector</con:item>
+        <con:item name="OAuthClientSet">com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector</con:item>
+        <con:item name="PingIDConnectionSet">com.pingidentity.pf.selectors.connectionset.ConnectionSetAdapterSelector</con:item>
+        <con:item name="HTTPBinConSet">com.pingidentity.pf.selectors.connectionset.ConnectionSetAdapterSelector</con:item>
+        <con:item name="OIDCClientWindowsLogin">com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector</con:item>
+        <con:item name="AdminParam">com.pingidentity.pf.selectors.http.HttpRequestParamAuthnSelector</con:item>
+    </con:map>
+    <con:map name="adapter-selectors-parents"/>
+</con:config>

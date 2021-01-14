@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:Source2TargetPluginMappings xmlns:urn="urn:pingidentity.com:pf:src2tgt">
+    <urn:Source2TargetPluginMapping sourcePluginId="JwtAccessTokenProcessor" targetPluginId="SAMLBearer" countForLicense="true">
+        <urn:AttributeMapping>
+            <urn1:AttributeMap Name="memberOf" Type="Token" Value="memberOf" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:AttributeMap Name="SAML_SUBJECT" Type="Token" Value="Username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        </urn:AttributeMapping>
+    </urn:Source2TargetPluginMapping>
+</urn:Source2TargetPluginMappings>

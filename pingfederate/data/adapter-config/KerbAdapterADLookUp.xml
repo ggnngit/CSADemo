@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:AdapterConfiguration authnCtxClassRef="" isInheritAttributeSettings="false" isInheritAttributeMapping="false" maskOgnlValues="false" isInheritExtendedContractAttributes="false" name="KerbAdapterADLookUp" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Domain/Realm Name">KERB-C4230E700920F56A9483EC7484C5ED529EA9EF52</urn:Field>
+        <urn:Field name="Error URL Redirect"/>
+        <urn:Field name="Error Template">false</urn:Field>
+        <urn:Field name="Authentication Context Value"/>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="Error Template">false</urn:Field>
+        <urn:Field name="Authentication Context Value"/>
+    </urn:AdvancedFields>
+    <urn:Tables/>
+    <urn:ExtendedContractAttributes>
+        <urn:AttributeName>description</urn:AttributeName>
+        <urn:AttributeName>MFA</urn:AttributeName>
+        <urn:AttributeName>memberOf</urn:AttributeName>
+    </urn:ExtendedContractAttributes>
+    <urn:UniqueKeyField>Username</urn:UniqueKeyField>
+    <urn:AttributeMapping>
+        <urn1:AttributeMap Name="Domain/Realm Name" Type="Adapter" Value="Domain/Realm Name" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="SIDs" Type="Adapter" Value="SIDs" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="Username" Type="Adapter" Value="Username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="MFA" Type="Expression" Value="#MFA=#this.get(&quot;ds.LDAPSearchKerb.memberOf&quot;), #MFA==null?&quot;False&quot;:#this.get(&quot;ds.LDAPSearchKerb.memberOf&quot;).toString().contains(&quot;Admin&quot;)||#this.get(&quot;ds.LDAPSearchKerb.memberOf&quot;).toString().contains(&quot;AdminB&quot;)" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="description" Type="LDAP" AttributeSourceId="LDAPSearchKerb" Value="description" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="memberOf" Type="LDAP" AttributeSourceId="LDAPSearchKerb" Value="memberOf" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeSource Id="LDAPSearchKerb" Description="LDAPSearchKerb" Type="LDAP" DataSourceId="LDAP-7E7321F1A07451A2538CBE28E3049C562A437409" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2">
+            <urn1:Parameter Name="filter" Value="sAMAccountName=${Username}"/>
+            <urn1:Parameter Name="search_base" Value="OU=Ping,DC=gcorp,DC=ovh"/>
+            <urn1:Parameter Name="search_scope" Value="SUBTREE_SCOPE"/>
+            <urn1:Parameter Name="memberof_nested_group" Value="false"/>
+        </urn1:AttributeSource>
+        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+    </urn:AttributeMapping>
+</urn:AdapterConfiguration>

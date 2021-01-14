@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:PluginConfiguration isInheritExtendedContractAttributes="false" name="RADIUS" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="NAS Identifier">pingfederate.lab</urn:Field>
+        <urn:Field name="Timeout">60000</urn:Field>
+        <urn:Field name="Retry Count">3</urn:Field>
+        <urn:Field name="Allow Challenge Retries after Access-Reject">false</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields>
+        <urn:Field name="NAS Identifier">pingfederate.lab</urn:Field>
+        <urn:Field name="Timeout">60000</urn:Field>
+        <urn:Field name="Retry Count">3</urn:Field>
+        <urn:Field name="Allow Challenge Retries after Access-Reject">false</urn:Field>
+    </urn:AdvancedFields>
+    <urn:Tables>
+        <urn:Table name="RADIUS Servers">
+            <urn:Row defaultRow="false">
+                <urn:Field name="Hostname">pingfederate.lab</urn:Field>
+                <urn:Field name="Authentication Port">1812</urn:Field>
+                <urn:Field name="Authentication Protocol">PAP</urn:Field>
+                <urn:Field name="Shared Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiTmswWnphcWk3NiIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..x12vfrZ2H1VlqNIkLn6sbQ.W_r9MwXiGYWlEWnzpjb7Yg.7OzNa0zUbWHLZ7in1VqC0Q</urn:Field>
+            </urn:Row>
+            <urn:Row defaultRow="false">
+                <urn:Field name="Hostname">127.0.0.1</urn:Field>
+                <urn:Field name="Authentication Port">1812</urn:Field>
+                <urn:Field name="Authentication Protocol">PAP</urn:Field>
+                <urn:Field name="Shared Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiTmswWnphcWk3NiIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..TyttD35aUrQALH7sNgp-Rg.cXL-JPg3z2SdzU9qh5yhdQ.ibksqq77PsUjUaM5xiUlGA</urn:Field>
+            </urn:Row>
+            <urn:Row defaultRow="false">
+                <urn:Field name="Hostname">172.23.0.1</urn:Field>
+                <urn:Field name="Authentication Port">1812</urn:Field>
+                <urn:Field name="Authentication Protocol">PAP</urn:Field>
+                <urn:Field name="Shared Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiTmswWnphcWk3NiIsInZlcnNpb24iOiIxMC4xLjAuOCJ9..rVGcNf-8xwPewBIOL-dY1Q.cyELxi38rkpdBcXN-bb3eg.gV-KpcAIy4W-__8duErxww</urn:Field>
+            </urn:Row>
+        </urn:Table>
+    </urn:Tables>
+    <urn:ExtendedContractAttributes/>
+</urn:PluginConfiguration>
